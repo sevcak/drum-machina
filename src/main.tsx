@@ -1,25 +1,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from './App.tsx'
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import './index.css'
-
-const router = createBrowserRouter(
-  [
-    {
-      path: "/",
-      element: <App />
-    },
-    {
-      path: "fcc",
-      element: <App />
-    }
-  ],
-  { basename: import.meta.env.DEV ? '/' : '/drum-machina/' }
-);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path="/fcc" Component={App}/>
+        <Route path="/" Component={App}/>
+      </Routes>
+    </Router>
   </React.StrictMode>,
 )

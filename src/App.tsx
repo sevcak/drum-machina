@@ -2,10 +2,9 @@ import DrumMachine from "./components/DrumMachine";
 
 const App = () => {
   return (
-    <div className='flex flex-col items-center w-screen'>
+    <div>
       <DrumMachine />
-      {/* Credit label */}
-      <p>coded by sevcak</p>
+      <p>made by sevcak</p>
     </div>
   )
 }
