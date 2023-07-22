@@ -5,7 +5,7 @@ const App = () => {
     <div className='flex flex-col items-center w-screen'>
       <DrumMachine />
       {/* Credit label */}
-      <iframe src="https://sevcak.github.io/sevcak-credit/"></iframe>
+      <p>coded by sevcak</p>
     </div>
   )
 }
