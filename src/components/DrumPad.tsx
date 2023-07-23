@@ -22,11 +22,13 @@ const DrumPad = (props: DrumPad) => {
 
   return (
     <button
+      id={`${props.trigger}-button`}
       className='
         drum-pad p-2 bg-zinc-500 text-gray-100 rounded
         border-b-2 border-zinc-800 shadow-lg
         hover:border-b-0 hover:translate-y-px hover:brightness-90
         active:brightness-75 active:hover:translate-y-[2px] active:border-t-2 active:shadow-inner
+        focus-visible:outline-0
       '
       onMouseDownCapture={() => playAudio()}
     >
