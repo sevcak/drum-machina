@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 
 interface DrumPad {
-  trigger: string;
-  sound: string;
+  trigger: string,
+  sound: string,
+  name: string
 }
 
 const DrumPad = (props: DrumPad) => {
@@ -10,6 +11,9 @@ const DrumPad = (props: DrumPad) => {
   
   const playAudio = () => {
     if (audioElement) {
+      const display = document.getElementById('display');
+      display!.innerText = props.name;
+
       audioElement.currentTime = 0;
       audioElement.play();
     }
